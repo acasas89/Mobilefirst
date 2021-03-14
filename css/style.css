@@ -197,4 +197,17 @@ main{
     margin-left: 10px;
     background-image: url("../assets/icons/trending-down.svg");
     background-size: cover;
+    background-position:center;
+    background-repeat: no-repeat;
+  }
+  .currency-table--container .up{
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    margin-left: 10px;
+    background-image: url("../assets/icons/trending-up.svg");
+    background-position: center;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
   }
