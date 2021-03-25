@@ -427,13 +427,23 @@ main{
   line-height: 1.8rem;
   color: #757575;
 }
+
+/*inicio seccion de slider para las tarjetas primero se hicieron las tarjetas con sus estilos y despues se agrego la siguiente parte*/
+.plans-container--slider{ 
+display: flex;
+height: 350px;
+overflow-x: scroll;
+overscroll-behavior-x:contain;
+scroll-snap-type:x proximity;
+}
 .plans-container--card{
   position: relative;
+  scroll-snap-align: center;
   width: 70%;
-  min-width: 230px;
+  min-width: 190px;
   max-width: 300px;
   height: 250px;
-  margin: 50px auto 0;
+  margin: 50px 5px 0;/*se agregaron los 5px para tener un gap entre las tarjetas*/
   padding: 0 15px;
   background-color: var(--just-white);
   border-radius: 15px;
@@ -467,11 +477,15 @@ main{
   color: black;
 }
 .plan-card--price span{
+  position: absolute;
   font-size: 1.2rem;
   font-weight: 300;
+  left: calc(35% - 6px);
+  top: 45px;
 }
-.plan-card--saving{
+.plans-container--card .plan-card--saving{
   font-size: 1.2rem;
+  padding-top: 8px;
   color: #757575;
 }
 .plan-card--ca{
@@ -493,6 +507,40 @@ main{
   height: 20px;
   background-image: url("../assets/icons/orange-right-arrow.svg");
   vertical-align: text-bottom;
-
 }
+.plans-container--card .basic{
+  position: absolute;
+  width: 120px;
+  height: 31px;
+  top: -15px;
+  left: calc(50% - 60px);
+  font-size: 1.2rem;
+  padding: 6px;
+  background-color: var(--secondary-blue);
+  border-radius: 8px;
+  color: var(--just-white);
+}
+
+.plans-container--card .plan-card--cabasic{
+  width: 150px;
+  height: 48px;
+  margin-top: 20px;
+  background-color: #FAF8F7;
+  border: 2px solid var(--secondary-blue);
+  border-radius: 4px;
+  font-family:'DM Sans', sans-serif;
+  font-size: 1.4rem;
+  font-weight: bold;
+  line-height: 1.8rem;
+  color: var(--black);
+}
+
+.plan-card--cabasic span{
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-image: url("../assets/icons/orange-right-arrow.svg");
+  vertical-align: text-bottom;
+}
+
 
